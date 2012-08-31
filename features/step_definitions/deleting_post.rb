@@ -11,5 +11,5 @@ end
 Then /^post should disappear from the posts list$/ do
     visit '/'
 
-    page.should have_no_content(@post.body)
+    page.has_no_content? @post.body
 end

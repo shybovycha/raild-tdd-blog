@@ -4,5 +4,5 @@ When /^fill comment body field with '(.+)'$/ do |comment_body|
 end
 
 Then /^comment should not appear$/ do
-    page.should_not have_content(@comment_body)
+    page.has_no_content? @comment_body
 end

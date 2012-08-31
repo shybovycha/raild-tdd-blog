@@ -7,5 +7,5 @@ When /^I navigate to '\/posts\/view\/(\d+)'$/ do |post_id|
 end
 
 Then /^I should see my post$/ do
-    page.should have_content(@post.body)
+    page.has_content? @post.body
 end

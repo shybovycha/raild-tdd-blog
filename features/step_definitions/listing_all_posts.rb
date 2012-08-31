@@ -8,6 +8,6 @@ end
 
 Then /^I should see all the posts$/ do
     @posts.each do |post|
-        page.should have_content(post.body)
+        page.has_content? post.body
     end
 end

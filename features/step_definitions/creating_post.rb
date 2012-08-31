@@ -13,5 +13,5 @@ end
 
 Then /^post should appear at the top of the posts list$/ do
     visit '/'
-    page.should have_content(@new_post_body)
+    page.has_content? @new_post_body
 end

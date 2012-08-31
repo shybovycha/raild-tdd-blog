@@ -1,4 +1,16 @@
 Blog::Application.routes.draw do
+  get "backoffice", :controller => :backoffice, :action => :index
+  get "backoffice/index"
+  match "backoffice/edit_post/:post_id", :controller => :backoffice, :action => :edit_post, :post_id => /\d+/
+  match "backoffice/delete_post/:post_id", :controller => :backoffice, :action => :delete_post, :post_id => /\d+/
+
+  get "posts/index"
+  match "posts/view/:post_title", :controller => :posts, :action => :view, :post_title => /\D.+/
+  match "posts/view/:post_id", :controller => :posts, :action => :view, :post_id => /\d+/
+  get "posts/not_found"
+
+  root :to => "posts#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

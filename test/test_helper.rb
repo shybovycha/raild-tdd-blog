@@ -7,6 +7,8 @@ require 'capybara/rails'
 require 'capybara/cucumber'
 
 class Cucumber::Rails::World
+    include Capybara::DSL
+
     def get_post_by_id(id)
         Post.find_by_id id
     end

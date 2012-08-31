@@ -6,5 +6,5 @@ end
 Then /^post should change on the posts list$/ do
     visit '/'
 
-    page.should have_content(@new_post_body)
+    page.has_content? @new_post_body
 end

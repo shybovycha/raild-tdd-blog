@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+    author: "super-author 1"
+    body: "MyText for comment #1"
+    post_id: 1
+
+two:
+    author: "comment author 2"
+    body: "MyText for the second comment"
+    post_id: 1
+
+three:
+    author: "super-author 1"
+    body: "MyText for comment #1"
+    post_id: 3
+
+four:
+    author: "comment author 1"
+    body: "MyText for the second comment"
+    post_id: 3
+
+five:
+    author: "super-author 1"
+    body: "My comment #1"
+    post_id: 2
+
+six:
+    author: "comment author 2"
+    body: "My second comment"
+    post_id: 2
+
+seven:
+    author: "super-author 1"
+    body: "comment #3"
+    post_id: 2
+
+eight:
+    author: "comment author 1"
+    body: "the fourth comment"
+    post_id: 2

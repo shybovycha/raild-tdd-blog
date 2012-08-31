@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+    id: 1
+    title: "First post"
+    body: "hello, world! i am the first post!"
+
+two:
+    id: 2
+    title: "post #2"
+    body: "hello, world! i am the second post!"
+
+three:
+    id: 3
+    title: third post
+    body: "hello, world! i am the third post!"
