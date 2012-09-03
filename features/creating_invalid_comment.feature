@@ -8,5 +8,5 @@ Feature: Creating invalid comments
         When I navigate to '/posts/view/id/3'
         And I click the 'add comment' link
         And fill comment body field with 'z'
-        And click save button
+        And click the 'add comment' button
         Then comment should not appear

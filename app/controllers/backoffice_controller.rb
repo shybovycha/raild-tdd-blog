@@ -2,12 +2,20 @@ class BackofficeController < ApplicationController
     before_filter :get_post, :except => [ :index ]
 
     def index
+        @posts = Post.all
     end
 
     def edit_post
     end
 
     def delete_post
+        @post.destroy
+
+        redirect_to request.referer
+    end
+
+    def save_post
+        
     end
 
     protected

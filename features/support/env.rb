@@ -5,6 +5,7 @@
 # files.
 
 require 'cucumber/rails'
+require 'database_cleaner'
 
 require File.expand_path('../../../test/test_helper', __FILE__)
 
@@ -69,4 +70,6 @@ Before do
 end
 
 Cucumber::Rails::World.use_transactional_fixtures
+DatabaseCleaner.strategy = :truncation
 
+DatabaseCleaner.clean

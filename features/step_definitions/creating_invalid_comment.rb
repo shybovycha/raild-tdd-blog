@@ -4,5 +4,5 @@ When /^fill comment body field with '(.+)'$/ do |comment_body|
 end
 
 Then /^comment should not appear$/ do
-    assert page.has_no_content? @comment_body
+    assert (not find(:css, ".comment-container .body", :regexp => Regexp.new("^#{ @comment_body }$")).nil?)
 end
