@@ -4,5 +4,5 @@ Feature: Browsing post by id
 
     Scenario: Browsing post by id
         Given post id=3
-        When I navigate to '/posts/view/3'
+        When I navigate to '/posts/view/id/3'
         Then I should see my post

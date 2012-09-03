@@ -1,3 +1,4 @@
+@javascript
 Feature: Creting comments
     As a blog reader
     I want to add a comment to particular post

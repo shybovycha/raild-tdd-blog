@@ -6,15 +6,17 @@ When /^fill all the fields needed$/ do
     @comment_body = 'my super comment'
     @comment_author = 'super_author'
 
-    fill_in '[name=comment\\[author\\]]', :with => @comment_author
-    fill_in '[name=comment\\[body\\]]', :with => @comment_body
+    fill_in 'comment[author]', :with => @comment_author
+    fill_in 'comment[body]', :with => @comment_body
 end
 
 When /^click the 'add comment' button$/ do
-    find('input[type=button].add-comment').click
+    find('.add-comment input[type=button].submit-button').click
 end
 
 Then /^I should see my comment$/ do
-    page.has_content? @comment_author
-    page.has_content? @comment_body
+    page.wait_for_ajax
+    
+    assert page.has_content? @comment_author
+    assert page.has_content? @comment_body
 end

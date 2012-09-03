@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
     attr_accessible :body, :title
-    has_many :comments
+    has_many :comments, :order => "created_at DESC"
 
     validates :title,
         :presence => true,

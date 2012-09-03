@@ -5,9 +5,11 @@ Blog::Application.routes.draw do
   match "backoffice/delete_post/:post_id", :controller => :backoffice, :action => :delete_post, :post_id => /\d+/
 
   get "posts/index"
-  match "posts/view/:post_title", :controller => :posts, :action => :view, :post_title => /\D.+/
-  match "posts/view/:post_id", :controller => :posts, :action => :view, :post_id => /\d+/
+  match "posts/view/title/:post_title", :controller => :posts, :action => :view, :post_title => /.+/
+  match "posts/view/id/:post_id", :controller => :posts, :action => :view, :post_id => /\d+/
   get "posts/not_found"
+  post "posts/create_comment"
+  match "posts/get_comments", :controller => :posts, :action => :get_comments
 
   root :to => "posts#index"
 

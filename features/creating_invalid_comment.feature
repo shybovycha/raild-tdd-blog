@@ -5,7 +5,7 @@ Feature: Creating invalid comments
 
     Scenario: Create invalid comment
         Given post id=3
-        When I navigate to '/posts/view/3'
+        When I navigate to '/posts/view/id/3'
         And I click the 'add comment' link
         And fill comment body field with 'z'
         And click save button
